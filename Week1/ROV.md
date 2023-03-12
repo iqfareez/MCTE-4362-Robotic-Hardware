@@ -1,4 +1,5 @@
-[![Download as PDF Button](https://img.shields.io/badge/Download%20AS%20pdf-EF3939?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&color=black&labelColor=ec1c24)](https://mdtopdf.up.railway.app/convertPdf?url=https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/blob/main/Week1/ROV.md)
+[![Download as PDF Button](https://img.shields.io/badge/Download%20as%20PDF-EF3939?style=flat-square&logo=adobeacrobatreader&logoColor=white&color=black&labelColor=ec1c24)](https://mdtopdf.up.railway.app/convertPdf?url=https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/blob/main/Week1/ROV.md)
+![Assignment completion](https://img.shields.io/badge/Status-In%20progress-yellow?style=flat-square)
 
 # Remotely Operated Vehicle (ROV)
 
@@ -44,11 +45,14 @@ ROV are used in several missions:
 
   > ROVs, allow us to explore the ocean without actually being in the ocean.
 
-- Military and law enforcement (search and rescue): For surveillance, search and recovery missions, disposing of explosives, and detecting environmental hazards.
-- Film and documentary
-- Maritime: Allow vessel owners to detect and quickly fix problems with the vessel’s structure.
+- **Military and law enforcement** (search and rescue): For surveillance, search and recovery missions, disposing of explosives, and detecting environmental hazards.
+- **Film** and documentary
 
-  [![Ship Hull Inspections ](https://markdown-videos.deta.dev/youtube/fm8bwW9yRXM)](https://youtu.be/fm8bwW9yRXM)
+  [![Beijing Aquarium](https://markdown-videos.deta.dev/youtube/F-viWrQ-7nU)](https://youtu.be/F-viWrQ-7nU)
+
+- **Maritime**: Allow vessel owners to detect and quickly fix problems with the vessel’s structure.
+
+  [![Ship Hull Inspections](https://markdown-videos.deta.dev/youtube/fm8bwW9yRXM)](https://youtu.be/fm8bwW9yRXM)
 
 ## Main components of the vehicle
 
@@ -60,16 +64,53 @@ ROV systems come in a variety of sizes and designs, but they often share **commo
 
 Common hull design is open frame or close hull.
 
-|                | Open frame hull                                                                                                                                                                      | Frameless hull (close hull)                                                                                                                                                                      |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Example**    | ![H2000](https://images.marinetechnologynews.com/images/maritime/h2000-photo-72940.jpg) <br> [H2000](https://www.energydais.com/eca-group/h2000-rov-remotely-operated-vehicle-9278/) | ![MEPUS-UICR](https://img.nauticexpo.com/images_ne/photo-g/200288-17569529.webp) <br> [MEPUS-UICR](https://www.nauticexpo.com/prod/zhizheng-ocean-technology-company/product-200288-581530.html) |
-| **Advantages** | Stable 3DOF translational motions based on large metacentre.                                                                                                                         | Greater mobility/highly manoeuvre                                                                                                                                                                |
-|                | Larger payloads and can carry object.                                                                                                                                                | Typically lightweight and portable                                                                                                                                                               |
-|                | Easier to attach tools and equipment.                                                                                                                                                | More energy efficient                                                                                                                                                                            |
-| **Advantages** | V have difficulties with motions requiring more than 3DOFs                                                                                                                           | Smaller payload                                                                                                                                                                                  |
-|                |                                                                                                                                                                                      | Not convenient for attaching tool or equipment                                                                                                                                                   |
+|                   | Open frame hull                                                                                                                                                                      | Frameless hull (close hull)                                                                                                                                     |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Example**       | ![H2000](https://images.marinetechnologynews.com/images/maritime/h2000-photo-72940.jpg) <br> [H2000](https://www.energydais.com/eca-group/h2000-rov-remotely-operated-vehicle-9278/) | ![NAVATICS MITO](https://www.navatics.com/wp-content/uploads/2020/01/underwater-rov.jpeg) <br> [NAVATICS MITO](https://www.navatics.com/product/navatics-mito/) |
+| **Advantages**    | Stable 3DOF translational motions based on large metacentre.                                                                                                                         | Greater mobility/highly manoeuvre                                                                                                                               |
+|                   | Larger payloads and can carry object.                                                                                                                                                | Typically lightweight and portable                                                                                                                              |
+|                   | Easier to attach tools and equipment.                                                                                                                                                | More energy efficient                                                                                                                                           |
+| **Disadvantages** | Have difficulties with motions requiring more than 3DOFs                                                                                                                             | Smaller payload                                                                                                                                                 |
+|                   |                                                                                                                                                                                      | Not convenient for attaching tool or equipment                                                                                                                  |
 
 ### Propulsion
+
+There are three types of propulsion systems in ROV; Electrical, Hydaulic, and Ducted Jet.
+
+#### a) Electrical
+
+It uses electric motors to power propellers that provide thrust to move the ROV. The electrical power is typically supplied by a cable that is connected to a power source on the surface.
+
+<img src="https://www.unmannedsystemstechnology.com/wp-content/uploads/2022/02/ROV-Underwater-Thrusters.jpg" width="50%">
+
+**Advantages**
+
+- Ease of control
+- High efficiency
+
+#### b) Hydraulic
+
+It uses a hydraulic system to power propellers that provide thrust to move the ROV. The hydraulic power is typically supplied by a pump that is located on the surface.
+
+<img src="https://img.nauticexpo.com/images_ne/photo-g/27362-3261319.jpg" width="50%">
+
+**Advantages**
+
+- High power output
+- Precise control
+- High reliability
+
+#### c) Ducted Jet
+
+It uses water jets that are directed through ducts to provide thrust to move the ROV.
+
+<img src="https://image.made-in-china.com/2f0j00ijFEyDQYZSoh/Kz-12k-Underwater-Thruster-Ducted-Propeller-Rov-Auv-Underwater-Vehicle-Water-or-Underwater-Leisure-Equirpments-RC-Boat-Underwater-Robot.jpg" width="50%">
+
+**Advantages**
+
+- High manueverability
+- Compact size
+- Low noise level
 
 ### Navigation
 
