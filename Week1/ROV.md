@@ -1,5 +1,5 @@
 [![Download as PDF Button](https://img.shields.io/badge/Download%20as%20PDF-EF3939?style=flat-square&logo=adobeacrobatreader&logoColor=white&color=black&labelColor=ec1c24)](https://mdtopdf.up.railway.app/convertPdf?url=https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/blob/main/Week1/ROV.md)
-![Assignment completion](https://img.shields.io/badge/Status-In%20progress-yellow?style=flat-square)
+![Assignment completion](https://img.shields.io/badge/Status-Completed-green?style=flat-square)
 
 # Remotely Operated Vehicle (ROV)
 
@@ -58,20 +58,18 @@ ROV are used in several missions:
 
 ROV systems come in a variety of sizes and designs, but they often share **common features** made up of some or all of the elements outlined in the following sections.
 
-<img src="https://bluerobotics.com/wp-content/uploads/2019/09/rov-component-diagram-1024x455.jpg" width="80%">
-
 ### Hull design
 
 Common hull design is open frame or close hull.
 
-|                   | Open frame hull                                                                                                                                                                      | Frameless hull (close hull)                                                                                                                                     |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Example**       | ![H2000](https://images.marinetechnologynews.com/images/maritime/h2000-photo-72940.jpg) <br> [H2000](https://www.energydais.com/eca-group/h2000-rov-remotely-operated-vehicle-9278/) | ![NAVATICS MITO](https://www.navatics.com/wp-content/uploads/2020/01/underwater-rov.jpeg) <br> [NAVATICS MITO](https://www.navatics.com/product/navatics-mito/) |
-| **Advantages**    | Stable 3DOF translational motions based on large metacentre.                                                                                                                         | Greater mobility/highly manoeuvre                                                                                                                               |
-|                   | Larger payloads and can carry object.                                                                                                                                                | Typically lightweight and portable                                                                                                                              |
-|                   | Easier to attach tools and equipment.                                                                                                                                                | More energy efficient                                                                                                                                           |
-| **Disadvantages** | Have difficulties with motions requiring more than 3DOFs                                                                                                                             | Smaller payload                                                                                                                                                 |
-|                   |                                                                                                                                                                                      | Not convenient for attaching tool or equipment                                                                                                                  |
+|                   | Open frame hull                                                                                          | Frameless hull (close hull)                                                                                |
+| ----------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Example**       | ![BlueROV2](https://imgur.com/0verevp.png) <br> [BlueROV2](https://bluerobotics.com/store/rov/bluerov2/) | ![SEABER YUCO SCAN MICRO](https://imgur.com/8iyYbgr.png) <br> [SEABER YUCO SCAN MICRO](https://seaber.fr/) |
+| **Advantages**    | Stable 3DOF translational motions based on large metacentre.                                             | Greater mobility/highly manoeuvre                                                                          |
+|                   | Larger payloads and can carry object.                                                                    | Typically lightweight and portable                                                                         |
+|                   | Easier to attach tools and equipment.                                                                    | More energy efficient                                                                                      |
+| **Disadvantages** | Have difficulties with motions requiring more than 3DOFs                                                 | Smaller/no payload                                                                                         |
+|                   |                                                                                                          | Not convenient for attaching tool or equipment                                                             |
 
 ### Propulsion
 
@@ -81,7 +79,7 @@ There are three types of propulsion systems in ROV; Electrical, Hydaulic, and Du
 
 It uses electric motors to power propellers that provide thrust to move the ROV. The electrical power is typically supplied by a cable that is connected to a power source on the surface.
 
-<img src="https://www.unmannedsystemstechnology.com/wp-content/uploads/2022/02/ROV-Underwater-Thrusters.jpg" width="50%">
+<img src="https://imgur.com/GtnPTFx.png" width="50%">
 
 **Advantages**
 
@@ -104,7 +102,7 @@ It uses a hydraulic system to power propellers that provide thrust to move the R
 
 It uses water jets that are directed through ducts to provide thrust to move the ROV.
 
-<img src="https://image.made-in-china.com/2f0j00ijFEyDQYZSoh/Kz-12k-Underwater-Thruster-Ducted-Propeller-Rov-Auv-Underwater-Vehicle-Water-or-Underwater-Leisure-Equirpments-RC-Boat-Underwater-Robot.jpg" width="50%">
+<img src="https://imgur.com/0iMP7r8.png" width="50%">
 
 **Advantages**
 
@@ -114,10 +112,92 @@ It uses water jets that are directed through ducts to provide thrust to move the
 
 ### Navigation
 
+### Thrusters
+
+On BlueROV2 (Heavy), it have **8 thrusters** to control the vehicle.
+
+**4 vertical** thrusters to control up and down motion.
+
+Another **4 thrusters** in **vectored configuration** that face 45 degree angle in all directions. By varying thrust in each thruster, it can create thrust vectors that allows the ROV move in any direction.
+
+![BlueROV navigation](https://imgur.com/QaXExGN.gif)
+
+_Source: https://www.youtube.com/watch?v=uugmuZINbW0_
+
+BlueROV2 have buoyancy foam to, well, control the buoyancy.
+
+<img src="https://imgur.com/uLf3C2K.png" width="60%">
+
+### Architecture
+
+In the electronics enclosure (top cylinder), it contains Navigator Flight Controller (it's [Pixhawk](https://pixhawk.org/) I believe and ArduSub) running BlueOS.
+
+Overall architecture overview of the navigation system:
+
+<img src="https://www.ardusub.com/images/hardware/Connection-Diagram-R1.png" width="70%"></img>
+
+_Image source: https://www.ardusub.com/introduction/hardware-options/connection-diagrams.html_
+
+It uses onboard sensors (like [IMU](https://www.advancednavigation.com/imu-ahrs)) to determine its altitude and heading to automatically stabilizes and control the vehicle based on the pilot inputs.
+
 ### Data collection
 
-ROV uses cameras, sonar, and other sensors to collect data.
+The BlueROV2 contains Raspberry Pi computer that coonnects to various sensors, input and outputs. Sensors can be added/expanded according to the user needs. Some of the sensors are:
+
+- Bar 30 pressure/depth & Temperature sensor
+- 1080p HD camera (with Hitec HS-5055MG servo to control the tilting angle)
+- 3-DOF gyroscope
+- 3-DOF accelerometer
+- 3-DOF magnetometer
+- Internal barometer
+- Current & Voltage Sensing
+- Leak detection
+
+For example, the image below is additional sensor added to the ROV. I believed it is a [side scan sonar](https://deepvision.se/products/side-scan-sonars/) module by [DeepVision](https://deepvision.se/).
+
+<img src="https://imgur.com/CIBrYD3.png" width="70%">
+
+Various electronics is packed on the top cylinder enclosure.
+
+<img src="https://imgur.com/lDQR2sP.png" width="50%">
+
+Meanwhile, SEABER YUCO-SCAN equipped with side scan sonar module to map the ocean/river/lake floor.
+
+<img src="https://imgur.com/bIhBudQ.png" width="60%">
 
 ### Data transmission
 
+The BlueROV2 connect to the ethernet network to forward the video stream and data to the computer on the surface.
+
+<img src="https://imgur.com/EkR370g.png" width="70%%">
+
+Fathom X Tether Interface board is an important component because it can transform the ethernet connection into a long range connection tether cable.
+
+On the surface, there will be another FXTI module (or FXTI box) to convert those signal received from the ROV. It have USB connector to connect to the computer.
+
+<img src="https://bluerobotics.com/wp-content/uploads/2018/08/IMG_1587.png" width="40%">
+
+_Source: https://bluerobotics.com/store/rov/bluerov2-accessories/fxti-asm-r1-rp/_
+
+The software used in [QGroundControl (QGC)](http://qgroundcontrol.io/), which is an [open-source](https://github.com/mavlink/qgroundcontrol) software, cross-platform ground control station for drones (Android, iOS, Mac OS, Linux, Windows)
+
+Features of the software including:
+
+- View live stream camera feed
+- View and adjust any parameters of the ROV
+- Interface with a gamepad or joystick controller to control the vehicle.
+- and more.
+
+On the other hands, SEABER YUDO-SCAN uses its software (I believe it's proprietery) to plan a mission (i.e., path planning for the ROV to follow) and control the ROV.
+
+After its mission have completed, the pilot can use the remote control shown below to retrieve the ROV.
+
+<img src="https://imgur.com/RKTqE1q.png" width="70%">
+
 ### Power management
+
+BlueROV2 have battery unit stored in the battery enclosure (bottom cylinder). For battery capacity of **18Ah** usuallly can last for 2 hours under normal use (for light use, it can go up to ~6hours)
+
+<img src="https://imgur.com/Xaz03KO.png" width="70%">
+
+For SEABER YUCO-SCAN, they reported to have endurance for **6 hours** at 2.5 knots
