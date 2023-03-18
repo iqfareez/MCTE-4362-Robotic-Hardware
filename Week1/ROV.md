@@ -90,8 +90,6 @@ It uses electric motors to power propellers that provide thrust to move the ROV.
 
 It uses a hydraulic system to power propellers that provide thrust to move the ROV. The hydraulic power is typically supplied by a pump that is located on the surface.
 
-<img src="https://img.nauticexpo.com/images_ne/photo-g/27362-3261319.jpg" width="50%">
-
 **Advantages**
 
 - High power output
@@ -112,7 +110,7 @@ It uses water jets that are directed through ducts to provide thrust to move the
 
 ### Navigation
 
-### Thrusters
+#### a) Thrusters
 
 On BlueROV2 (Heavy), it have **8 thrusters** to control the vehicle.
 
@@ -120,7 +118,7 @@ On BlueROV2 (Heavy), it have **8 thrusters** to control the vehicle.
 
 Another **4 thrusters** in **vectored configuration** that face 45 degree angle in all directions. By varying thrust in each thruster, it can create thrust vectors that allows the ROV move in any direction.
 
-![BlueROV navigation](https://imgur.com/QaXExGN.gif)
+![BlueROV navigation](https://user-images.githubusercontent.com/60868965/226113764-161e897e-58dd-4771-9d2a-afc9db2865b5.gif)
 
 _Source: https://www.youtube.com/watch?v=uugmuZINbW0_
 
@@ -128,7 +126,7 @@ BlueROV2 have buoyancy foam to, well, control the buoyancy.
 
 <img src="https://imgur.com/uLf3C2K.png" width="60%">
 
-### Architecture
+#### b) Architecture
 
 In the electronics enclosure (top cylinder), it contains Navigator Flight Controller (it's [Pixhawk](https://pixhawk.org/) I believe and ArduSub) running BlueOS.
 
@@ -175,7 +173,7 @@ Fathom X Tether Interface board is an important component because it can transfo
 
 On the surface, there will be another FXTI module (or FXTI box) to convert those signal received from the ROV. It have USB connector to connect to the computer.
 
-<img src="https://bluerobotics.com/wp-content/uploads/2018/08/IMG_1587.png" width="40%">
+<img src="https://user-images.githubusercontent.com/60868965/226114024-729e2618-191a-4b76-ae64-d426f72b0042.png" width="45%">
 
 _Source: https://bluerobotics.com/store/rov/bluerov2-accessories/fxti-asm-r1-rp/_
 
