@@ -121,16 +121,16 @@ Another **4 thrusters** in **vectored configuration** that face 45 degree angle 
 ![BlueROV navigation](https://user-images.githubusercontent.com/60868965/226113764-161e897e-58dd-4771-9d2a-afc9db2865b5.gif)
 
 _Source: https://www.youtube.com/watch?v=uugmuZINbW0_
+archi
+BlueROV2 have buoyancy foam, well, to control the buoyancy.
 
-BlueROV2 have buoyancy foam to, well, control the buoyancy.
-
-<img src="https://imgur.com/uLf3C2K.png" width="60%">
+<img src="https://imgur.com/k4Shwmi.png" width="65%">
 
 #### b) Architecture
 
-In the electronics enclosure (top cylinder), it contains Navigator Flight Controller (it's [Pixhawk](https://pixhawk.org/) I believe and ArduSub) running BlueOS.
+In the electronics enclosure (top cylinder), it contains Navigator Flight Controller (it's [Pixhawk](https://pixhawk.org/) and [ArduSub](https://www.ardusub.com/)) running BlueOS.
 
-Overall architecture overview of the navigation system:
+Overview of the navigation system architecture:
 
 <img src="https://www.ardusub.com/images/hardware/Connection-Diagram-R1.png" width="70%"></img>
 
@@ -169,13 +169,14 @@ The BlueROV2 connect to the ethernet network to forward the video stream and dat
 
 <img src="https://imgur.com/EkR370g.png" width="70%%">
 
-Fathom X Tether Interface board is an important component because it can transform the ethernet connection into a long range connection tether cable.
+[Fathom X Tether Interface board](https://bluerobotics.com/store/comm-control-power/tether-interface/fathom-x-tether-interface-board-set-copy/) is an important component because it can transform the ethernet connection into a long range connection tether cable.
 
 On the surface, there will be another FXTI module (or FXTI box) to convert those signal received from the ROV. It have USB connector to connect to the computer.
 
-<img src="https://user-images.githubusercontent.com/60868965/226114024-729e2618-191a-4b76-ae64-d426f72b0042.png" width="45%">
+<img src="https://imgur.com/nd0Fl9L.png" width="65%">
 
-_Source: https://bluerobotics.com/store/rov/bluerov2-accessories/fxti-asm-r1-rp/_
+_Source 1: https://underwaterdrone.stores.jp/items/5cde21740b92110fd4001c78_\
+_Source 2: https://bluerobotics.com/store/rov/bluerov2-accessories/fxti-asm-r1-rp/_
 
 The software used in [QGroundControl (QGC)](http://qgroundcontrol.io/), which is an [open-source](https://github.com/mavlink/qgroundcontrol) software, cross-platform ground control station for drones (Android, iOS, Mac OS, Linux, Windows)
 
@@ -186,9 +187,11 @@ Features of the software including:
 - Interface with a gamepad or joystick controller to control the vehicle.
 - and more.
 
+<img src="https://imgur.com/8WbwbEY.png" width="70%">
+
 On the other hands, SEABER YUDO-SCAN uses its software (I believe it's proprietery) to plan a mission (i.e., path planning for the ROV to follow) and control the ROV.
 
-After its mission have completed, the pilot can use the remote control shown below to retrieve the ROV.
+After its mission have completed, the pilot can use the remote control as shown below to retrieve the ROV.
 
 <img src="https://imgur.com/RKTqE1q.png" width="70%">
 
