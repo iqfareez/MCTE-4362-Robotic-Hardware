@@ -21,7 +21,7 @@ In **1953**, ROV were first build by Dimitri Rebikoff. The name is the Poodle.
 
 <img src="https://bluerobotics.com/wp-content/uploads/2019/09/poodle-rov.jpg" width="50%">
 
-In **1960**, navy has deployed ROVs to recover torpedos, bombs, mines etc. The vehicle is used in dangerous places for sailors such as mine area.
+In **1960**, Navy has deployed ROVs to recover torpedos, bombs, mines etc. The vehicle is used in dangerous places for sailors such as mine area.
 
 The initial commercial vehicle for the offshore oil industry was introduced in **1975**.
 
@@ -77,7 +77,7 @@ There are three types of propulsion systems in ROV; Electrical, Hydaulic, and Du
 
 #### a) Electrical
 
-It uses electric motors to power propellers that provide thrust to move the ROV. The electrical power is typically supplied by a cable that is connected to a power source on the surface.
+It uses electric motors to power propellers that provide thrust to move the ROV. The electrical power is typically supplied from power source on the surface or from the battery.
 
 <img src="https://imgur.com/GtnPTFx.png" width="50%">
 
@@ -116,13 +116,13 @@ On BlueROV2 (Heavy), it have **8 thrusters** to control the vehicle.
 
 **4 vertical** thrusters to control up and down motion.
 
-Another **4 thrusters** in **vectored configuration** that face 45 degree angle in all directions. By varying thrust in each thruster, it can create thrust vectors that allows the ROV move in any direction.
+Another **4 thrusters** in **vectored configuration** that face 45 degree angle in all horizontal directions. By varying thrust in each thruster, it can create thrust vectors that allows the ROV move in any direction.
 
 ![BlueROV navigation](https://user-images.githubusercontent.com/60868965/226113764-161e897e-58dd-4771-9d2a-afc9db2865b5.gif)
 
 _Source: https://www.youtube.com/watch?v=uugmuZINbW0_
-archi
-BlueROV2 have buoyancy foam, well, to control the buoyancy.
+
+BlueROV2 have Polyurethane buoyancy foam attached to the hull, to well, control the buoyancy.
 
 <img src="https://imgur.com/k4Shwmi.png" width="65%">
 
@@ -159,7 +159,7 @@ Various electronics is packed on the top cylinder enclosure.
 
 <img src="https://imgur.com/lDQR2sP.png" width="50%">
 
-Meanwhile, SEABER YUCO-SCAN equipped with side scan sonar module to map the ocean/river/lake floor.
+Meanwhile, SEABER YUCO-SCAN equipped with side scan sonar module attached inside its hull to map the ocean/river/lake floor.
 
 <img src="https://imgur.com/bIhBudQ.png" width="60%">
 
@@ -175,8 +175,7 @@ On the surface, there will be another FXTI module (or FXTI box) to convert those
 
 <img src="https://imgur.com/nd0Fl9L.png" width="65%">
 
-_Source 1: https://underwaterdrone.stores.jp/items/5cde21740b92110fd4001c78_\
-_Source 2: https://bluerobotics.com/store/rov/bluerov2-accessories/fxti-asm-r1-rp/_
+[[Source 1](https://underwaterdrone.stores.jp/items/5cde21740b92110fd4001c78), [Source 2](https://bluerobotics.com/store/rov/bluerov2-accessories/fxti-asm-r1-rp/)]
 
 The software used in [QGroundControl (QGC)](http://qgroundcontrol.io/), which is an [open-source](https://github.com/mavlink/qgroundcontrol) software, cross-platform ground control station for drones (Android, iOS, Mac OS, Linux, Windows)
 
@@ -189,7 +188,7 @@ Features of the software including:
 
 <img src="https://imgur.com/8WbwbEY.png" width="70%">
 
-On the other hands, SEABER YUDO-SCAN uses its software (I believe it's proprietery) to plan a mission (i.e., path planning for the ROV to follow) and control the ROV.
+On the other hands, SEABER YUCO-SCAN uses its software (I believe it's proprietery) to plan a mission (i.e., path planning for the ROV to follow) and control the ROV.
 
 After its mission have completed, the pilot can use the remote control as shown below to retrieve the ROV.
 
