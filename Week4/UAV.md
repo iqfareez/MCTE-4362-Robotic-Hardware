@@ -14,6 +14,7 @@
   - [Data collection](#data-collection)
   - [Data transmission](#data-transmission)
   - [Power management](#power-management)
+- [Internship experience](#internship-experience)
 
 ## History of UAV
 
@@ -165,39 +166,45 @@ Hybrid UAVs can be configured in different ways, but most designs feature a tilt
     <td>Electric</td>
     <td>Quiet, efficient, low emissions</td>
     <td>Shorter flight times, limited payload capacity</td>
-    <td>DJI Mavic 3
-    <img src="https://dji-official-fe.djicdn.com/dps/fa9086cc12f8187ba6462bb0df2dc881@origin.jpg" />
+    <td>
+    <img src="https://dji-official-fe.djicdn.com/dps/fa9086cc12f8187ba6462bb0df2dc881@origin.jpg" /><br/>
+    <a href="https://www.dji.com/mavic-3">DJI Mavic 3</a>
     </td>
   </tr>
   <tr>
     <td>Gasoline</td>
     <td>More power, longer flight times</td>
     <td>Louder, more emissions</td>
-    <td>Insitu ScanEagle
-      <img src="https://www.insitu.com/wp-content/uploads/2020/11/SE_Gallery_04.jpg"/></td>
+    <td>
+      <img src="https://www.insitu.com/wp-content/uploads/2020/11/SE_Gallery_04.jpg"/><br/>
+      <a href="https://www.insitu.com/products/scaneagle">Insitu ScanEagle</a>
+      </td>
   </tr>
   <tr>
     <td>Jet</td>
     <td>High speeds, high altitude capabilities</td>
     <td>Louder, more expensive to operate</td>
-    <td>General Atomics MQ-9 Reaper
-    <img src="https://i.guim.co.uk/img/media/94122807825fb1ee6eabb011645551731a32341a/224_101_6409_3848/master/6409.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=65f66cc0768f61b17adfda2a53067270"/>
+    <td>
+    <img src="https://i.guim.co.uk/img/media/94122807825fb1ee6eabb011645551731a32341a/224_101_6409_3848/master/6409.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=65f66cc0768f61b17adfda2a53067270"/><br/>
+    <a href="https://www.ga-asi.com/remotely-piloted-aircraft/mq-9a">General Atomics MQ-9 Reaper</a>
     </td>
   </tr>
   <tr>
     <td>Hybrid</td>
     <td>Flexible, efficient</td>
     <td>More complex, higher cost</td>
-    <td>Boeing Phantom Eye
-    <img src="https://www.aerocontact.com/public/img/aviaexpo/produits/images/471/detail_Phantom-Eye-1.jpg"/>
+    <td>
+    <img src="https://www.aerocontact.com/public/img/aviaexpo/produits/images/471/detail_Phantom-Eye-1.jpg"/><br/>
+    <a href="https://www.boeing.com/defense/phantom-eye/">Boeing Phantom Eye</a>
     </td>
   </tr>
   <tr>
     <td>Solar</td>
     <td>Unlimited flight times, environmentally friendly</td>
     <td>Slower, limited payload capacity</td>
-    <td>QinetiQ Zephyr
-    <img src="https://www.airforce-technology.com/wp-content/uploads/sites/6/2017/09/5-zephyr.jpg" />
+    <td>
+    <img src="https://www.airforce-technology.com/wp-content/uploads/sites/6/2017/09/5-zephyr.jpg" /><br/>
+    <a href="https://www.airbus.com/en/products-services/defence/uas/uas-solutions/zephyr">QinetiQ Zephyr</a>
     </td>
   </tr>
 </table>
@@ -207,6 +214,66 @@ Hybrid UAVs can be configured in different ways, but most designs feature a tilt
 - **Hybrid** propulsion systems combine two or more types of propulsion, such as electric and gasoline or electric and solar, to provide greater flexibility and efficiency. Hybrid UAVs **can switch between different propulsion systems** depending on the mission requirements, allowing them to optimize performance and range.
 - **Gasoline** propulsion systems use gasoline as their primary fuel source, whereas **jet** propulsion systems typically use kerosene-based fuels, such as Jet A or Jet A-1.
 
+### Navigation
+
+Skyfront Perimeter 8 can be controlled manually, using **remote control**, or autonomously, using **SkyfrontGCS software**
+
+Below is the example of the **RC** used.
+
+<img src="https://static.cytron.io/image/cache/catalog/products/FS-I6-M2/FS-I6-M2-800x800.jpg" width="350">
+
+_p/s: it is not really FlySky brand, but it is similar!_
+
+Alternatively, the flight path can be planned using **SkyfrontGCS** software. The software is able to plan the flight path, and send the flight path to the UAV. The UAV will then follow the flight path autonomously. The software is based on the Mission Control software I believe. The software also able to receive data from the UAV (temp, altitude etc.).
+
+https://user-images.githubusercontent.com/60868965/229836388-35f5a503-1748-4116-b04f-bd242598d7d0.mp4
+
+On the other hands, **DJI drones** can use [DJI Smart Controller](https://www.dji.com/rc?site=brandsite&from=eol_smart-controller). This controller is able to control the drones and also receive live broadcast from the drone's camera.
+
+<img src="https://dji-official-fe.djicdn.com/dps/5919beda1853e73f3db4c2d3ea0f695c.jpg" width="500"/>
+
+### Data Collection
+
 ### Data Transmission
 
 ### Power Management
+
+#### Battery
+
+#### Engine
+
+Skyfront Perimeter 8 UAV powered by the engine. The battery is used to start the engine, and as the backup power for the UAV to land in case of emergency. The battery can only last for 3-5 minutes - just enough to lands the vehicle and payload safely. Even the electronics is driven by the engine, no power from battery involved.
+
+Image below shows the fuel (red colour) that just been refilled into the tank.
+
+![SCS Skyfront](https://user-images.githubusercontent.com/60868965/229840748-10318a20-bfba-4d3f-94d4-c0f80aa4584f.png)
+
+The fuel used is G2K proprietary hybrid gasoline-electric propulsion system. The engine is quite loud while operating (just like the cutting grass engine)
+
+With payload, the UAV can fly for 1-2.5 hours. But, without payload, the UAV can fly up to 6 hours!
+
+On the other hands, DJI Drones can use DJI Smart Controller to control the drone. The controller is able to control the drone, and also able to see the drone's camera feed.
+
+<img src="https://dji-official-fe.djicdn.com/dps/5919beda1853e73f3db4c2d3ea0f695c.jpg" width="400">
+
+#### Hybrid
+
+## Internship experience
+
+<img src="https://user-images.githubusercontent.com/60868965/229862747-6af2d5a5-efc7-4e0a-8a2c-ee1d60618f76.png" width="100" />
+
+In my 3 months of Internship at System Consultancy Services (SCS), I joined several mission related to UAV.
+
+On August 2022, we had planned to conduct flight endurance test for the company's UAV - Skyfront Perimeter 8. The location of the mission is Pulau Indah, Perak.
+
+I was assigned to monitor the telemetry of the UAV from the GCS. From the GCS, I can see the UAV if it is near. See video below:
+
+https://user-images.githubusercontent.com/60868965/229838860-de1342af-529a-43ea-a793-1e37cc51e9b4.mp4
+
+The mission was successful. The UAV was able to fly about 2 hours (iirc).
+
+The pilot takeover the control and lands the UAV safely.
+
+https://user-images.githubusercontent.com/60868965/229861251-c4ab1f15-a943-4a67-a615-2885a0f1b339.mp4
+
+HD & Full video: https://youtu.be/RucIUQfPn2Q
