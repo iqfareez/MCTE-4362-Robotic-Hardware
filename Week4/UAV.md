@@ -18,7 +18,83 @@
 
 ## History of UAV
 
+- Early 1900s: First attempts to create unmanned aircraft
+  1960s-1970s: US military begins using UAVs for reconnaissance missions in Vietnam War
+- 1980s: Advances in microelectronics and computer technology lead to development of smaller and more sophisticated UAVs
+- 1990s-2000s: UAVs used for military operations in Iraq and Afghanistan, leading to increased interest from various industries
+- Recent years: Development of commercial drones for personal and professional use, including photography, surveying, search and rescue, and delivery services. Ongoing advancements in technology continue to improve UAV capabilities and potential uses
+
 ## Applications of UAV
+
+<table>
+  <tr>
+    <th>Application</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>Agriculture</td>
+    <td>
+      <ul>
+        <li>Crop monitoring and analysis</li>
+        <li>Precision agriculture and mapping</li>
+        <li>Pest and disease detection</li>
+      </ul>
+    </td>
+    <td>
+    Drones are used to spray, seed, and fertilise a paddy crops in Perlis.<br/>
+    <img src="https://cilisos.my/wp-content/uploads/2022/09/index-768x1024.jpg">
+    <a href="https://cilisos.my/meet-nasrun-the-perlis-guy-modernising-paddy-farming-using-drones/">[Source]</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Delivery and logistics</td>
+    <td>
+      <ul>
+        <li>Package and parcel delivery</li>
+        <li>Inventory management and tracking</li>
+      </ul>
+    </td>
+    <td>Amazon's Prime Air drones are capable of delivering packages weighing up to 5 pounds.
+    <a href="https://www.cnet.com/tech/services-and-software/amazon-drone-delivery-happening-in-california-and-texas/">[Source]</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Construction and engineering</td>
+    <td>
+      <ul>
+        <li>Site surveying and inspection</li>
+        <li>Progress monitoring and reporting</li>
+        <li>Infrastructure maintenance and repair</li>
+      </ul>
+    </td>
+    <td>Surveying and inspecting construction sites, monitoring progress and reporting on projects, and conducting infrastructure maintenance and repairs.</td>
+  </tr>
+ <tr>
+    <td>Law enforcement</td>
+    <td>
+      <ul>
+        <li>Surveillance and monitoring</li>
+        <li>Traffic management and control</li>
+        <li>Investigating crimes and accidents</li>
+      </ul>
+    </td>
+    <td>PDRM using drones to catch highway emergency lane offenders in Ops Selamat 18, roadblocks on PLUS
+    <img src="https://user-images.githubusercontent.com/60868965/230009659-a9299273-7237-48f4-b7c6-05dfdf1e86d1.png" />
+    <a href="https://paultan.org/2022/05/05/pdrm-using-drones-to-catch-highway-emergency-lane-offenders-in-ops-selamat-18-roadblocks-on-plus">[Source]</a>
+        </td>
+  </tr>
+  <tr>
+    <td>Media and entertainment</td>
+    <td>
+      <ul>
+        <li>Cinematography and videography</li>
+        <li>Live event coverage and broadcasting</li>
+      </ul>
+    </td>
+    <td>Producing aerial footage for films and television shows, covering live events such as sports and concerts, and broadcasting real-time footage to audiences around the world.</td>
+  </tr>
+</table>
 
 ## Main components of the vehicle
 
@@ -218,6 +294,27 @@ Hybrid UAVs can be configured in different ways, but most designs feature a tilt
 
 Skyfront Perimeter 8 can be controlled manually, using **remote control**, or autonomously, using **SkyfrontGCS software**
 
+Supported flight mode for Skyfront Perimeter 8 is shown as follows:
+
+<table>
+  <tr>
+    <th>Manual through remote controller</th>
+    <th>GPS-based waypoint autonomy</th>
+  </tr>
+  <tr>
+    <td>Stabilize</td>
+    <td>Survey</td>
+  </tr>
+  <tr>
+    <td>Altitude (barometer- and GPS-based)</td>
+    <td>Waypoint navigation and payload control</td>
+  </tr>
+  <tr>
+    <td>Position (GPS-based)</td>
+    <td>Automatic land and takeoff</td>
+  </tr>
+</table>
+
 Below is the example of the **RC** used.
 
 <img src="https://static.cytron.io/image/cache/catalog/products/FS-I6-M2/FS-I6-M2-800x800.jpg" width="350">
@@ -234,13 +331,33 @@ On the other hands, **DJI drones** can use [DJI Smart Controller](https://www.dj
 
 ### Data Collection
 
+Data that are collected by the UAV are varies to its use cases. However, below is the most common data that are collected by the UAV.
+
+- Aerial imagery (RGB): Captured by high-resolution cameras such as the [Sony RX1R II](https://wingtra.com/mapping-drone-wingtraone/mapping-cameras/sony-rx1r-ii/).
+- Thermal imagery (IR): Captured by thermal cameras such as the [DJI Zenmuse H20N](https://www.dji.com/zenmuse-h20n?site=brandsite&from=eol_zenmuse-xt2) (nightvision)
+- LiDAR data: Captured by LiDAR sensors such as the [Velodyne Puck LITE](https://velodynelidar.com/products/puck-lite/)
+- Atmospheric data: Captured by sensors such as the [Sensirion SHT31](https://sensirion.com/products/catalog/SEK-SHT31) or the Bosch BME280
+- Video data: Captured by cameras similar to those used for aerial imagery, or specialized cameras such as the DJI Zenmuse Z30 or [GoPro](https://gopro.com/en/us/) for zooming capabilities.
+
 ### Data Transmission
+
+Below is setup for Skyfront Perimeter 8 including the GCS and the antenna.
+
+![GCS Skyfront antenna](https://skyfront.com/wp-content/uploads/2022/05/Edited-nobg-CP1A0582-1536x1189.png)
+
+However, we used somewhat different antenna model
+
+![Skyfront antenna](https://user-images.githubusercontent.com/60868965/230003919-0e024fd9-f19a-40fa-bd48-dfef584d588e.png)
+
+The antenna is able to transmit data to and from the ground station. The data is then processed by the ground station and displayed on the screen. The connection between GCS and the antenna is by using **ethernet** RJ45 cable.
+
+It is reported that the telemetry can reach 10 - 100 km.
 
 ### Power Management
 
 #### Battery
 
-#### Engine
+#### Engine/Hybrid
 
 Skyfront Perimeter 8 UAV powered by the engine. The battery is used to start the engine, and as the backup power for the UAV to land in case of emergency. The battery can only last for 3-5 minutes - just enough to lands the vehicle and payload safely. Even the electronics is driven by the engine, no power from battery involved.
 
@@ -252,11 +369,9 @@ The fuel used is G2K proprietary hybrid gasoline-electric propulsion system. The
 
 With payload, the UAV can fly for 1-2.5 hours. But, without payload, the UAV can fly up to 6 hours!
 
-On the other hands, DJI Drones can use DJI Smart Controller to control the drone. The controller is able to control the drone, and also able to see the drone's camera feed.
+On the other hands, [ScanEagle 3](https://www.insitu.com/wp-content/uploads/2020/12/ScanEagle3_ProductCard_DU120320.pdf) equipped with electric hybrid engine for missions that equire increased available power and a low acoustic signature
 
-<img src="https://dji-official-fe.djicdn.com/dps/5919beda1853e73f3db4c2d3ea0f695c.jpg" width="400">
-
-#### Hybrid
+The endurance can go up to 18 hours. Engine & fuel type: Heavy fuel (JP-5/JP-8)
 
 ## Internship experience
 
@@ -264,7 +379,9 @@ On the other hands, DJI Drones can use DJI Smart Controller to control the drone
 
 In my 3 months of Internship at System Consultancy Services (SCS), I joined several mission related to UAV.
 
-On August 2022, we had planned to conduct flight endurance test for the company's UAV - Skyfront Perimeter 8. The location of the mission is Pulau Indah, Perak.
+On August 2022, we had planned to conduct flight endurance test for the company's UAV - Skyfront Perimeter 8. The location of the mission is Pulau Indah, Perak. The site is clear and wide, made it suitable for a UAV pilots who want to test their drones.
+
+![Skyfront cover](https://user-images.githubusercontent.com/60868965/229945849-43b5718e-25b5-4d69-a45c-7cc996ba4892.png)
 
 I was assigned to monitor the telemetry of the UAV from the GCS. From the GCS, I can see the UAV if it is near. See video below:
 
