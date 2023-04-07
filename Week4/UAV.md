@@ -1,5 +1,5 @@
 [![Download as PDF Button](https://img.shields.io/badge/Download%20as%20PDF-EF3939?style=flat-square&logo=adobeacrobatreader&logoColor=white&color=black&labelColor=ec1c24)](https://mdtopdf.up.railway.app/convertPdf?url=https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/blob/main/Week4/UAV.md)
-![Assignment completion](https://img.shields.io/badge/Status-In%20Progress-yellow?style=flat-square)
+![Assignment completion](https://img.shields.io/badge/Status-Completed-green?style=flat-square)
 
 # Unmanned Aerial Vehicle (UAV)
 
@@ -14,15 +14,15 @@
   - [Data collection](#data-collection)
   - [Data transmission](#data-transmission)
   - [Power management](#power-management)
-- [Internship experience](#internship-experience)
+- [Internship experiences](#internship-experiences)
 
 ## History of UAV
 
 - Early 1900s: First attempts to create unmanned aircraft
-  1960s-1970s: US military begins using UAVs for reconnaissance missions in Vietnam War
+- 1960s-1970s: US military begins using UAVs for reconnaissance missions in Vietnam War
 - 1980s: Advances in microelectronics and computer technology lead to development of smaller and more sophisticated UAVs
 - 1990s-2000s: UAVs used for military operations in Iraq and Afghanistan, leading to increased interest from various industries
-- Recent years: Development of commercial drones for personal and professional use, including photography, surveying, search and rescue, and delivery services. Ongoing advancements in technology continue to improve UAV capabilities and potential uses
+- Recent years: Development of commercial drones for personal and professional use, including photography, surveying, search and rescue, and delivery services. Ongoing advancements in technology continue to improve UAV capabilities and potential uses as discussed below.
 
 ## Applications of UAV
 
@@ -43,7 +43,7 @@
     </td>
     <td>
     Drones are used to spray, seed, and fertilise a paddy crops in Perlis.<br/>
-    <img src="https://cilisos.my/wp-content/uploads/2022/09/index-768x1024.jpg">
+    <img src="https://cilisos.my/wp-content/uploads/2022/09/index-768x1024.jpg" width="300"><br/>
     <a href="https://cilisos.my/meet-nasrun-the-perlis-guy-modernising-paddy-farming-using-drones/">[Source]</a>
     </td>
   </tr>
@@ -315,6 +315,14 @@ Supported flight mode for Skyfront Perimeter 8 is shown as follows:
   </tr>
 </table>
 
+**Autopilot firmware** - Perimeter 8 equipped with Janus Autopilot (Proprietary) - [PX4](https://px4.io/) based.
+
+> PX4 is an open-source flight control software stack designed for autonomous drones and other unmanned aerial vehicles (UAVs). It provides a complete set of software tools and algorithms for controlling the flight of drones, including stabilization, guidance, and navigation.
+
+**Autopilot electronics** - Pixhawk
+
+<img src="https://docs.px4.io/v1.9.0/assets/flight_controller/pixhawk4/pixhawk4_logo_view.jpg" width="500">
+
 Below is the example of the **RC** used.
 
 <img src="https://static.cytron.io/image/cache/catalog/products/FS-I6-M2/FS-I6-M2-800x800.jpg" width="350">
@@ -353,27 +361,49 @@ The antenna is able to transmit data to and from the ground station. The data is
 
 It is reported that the telemetry can reach 10 - 100 km.
 
+For Perimeter 8, it is possible to add payload such as camera etc, however, the telecommunication system need to be added seperately from 3rd party providers. One popular choices is from [Microhard](https://www.microhardcorp.com/).
+
+Example:
+
+![n920X2](https://www.microhardcorp.com/images/products/detail_n920X2_OEM_top.jpg)
+
 ### Power Management
 
 #### Battery
 
+In Mavic 3, it uses LiPo Battery to power the UAV. The battery specifications are as follows:
+
+- **Capacity**: 5000 mAh
+- **Voltage**: 15.4 V
+- **Charging Voltage Limit**: 17.6 V
+- **Battery Type**: Li-ion 4S
+- **Energy**: 77 Wh
+
+<img src="https://user-images.githubusercontent.com/60868965/230261800-4d72ff90-07a2-41cf-b57e-c4cce9d07c02.png" width=" 400">
+
 #### Engine/Hybrid
 
-Skyfront Perimeter 8 UAV powered by the engine. The battery is used to start the engine, and as the backup power for the UAV to land in case of emergency. The battery can only last for 3-5 minutes - just enough to lands the vehicle and payload safely. Even the electronics is driven by the engine, no power from battery involved.
+Skyfront perimeter 8 have some features regarding the power management.
 
-Image below shows the fuel (red colour) that just been refilled into the tank.
+- The Skyfront Perimeter 8 UAV is** powered by its engine** and equipped with a **backup battery** for emergency use.
+- The battery is responsible for starting the engine and can sustain the UAV for only 3-5 minutes, which is enough time to land the vehicle and payload safely.
+- Despite the engine powering the electronics, the battery is not involved in providing power.
+- The UAV features a **fully redundant power system** that can operate on battery power in case of an engine failure.
+- The Engine Wear Protection feature ensures that the engine operates continuously at less than 70% of its maximum power to prevent wear and tear.
 
-![SCS Skyfront](https://user-images.githubusercontent.com/60868965/229840748-10318a20-bfba-4d3f-94d4-c0f80aa4584f.png)
+Image below shows the fuel (red colour) that just been refilled into the tank prior the mission.
 
-The fuel used is G2K proprietary hybrid gasoline-electric propulsion system. The engine is quite loud while operating (just like the cutting grass engine)
+![Skyfront perimeter 8 fuel tank](https://user-images.githubusercontent.com/60868965/230523393-3b4cbfcf-50bd-4188-80a7-83717bbd5406.png)
 
-With payload, the UAV can fly for 1-2.5 hours. But, without payload, the UAV can fly up to 6 hours!
+- The fuel used is G2K proprietary hybrid gasoline-electric propulsion system. The engine is quite loud while operating (just like the lawn mower's engine)
+- The battery is Lithium Polymer 3s (2x)
+- With payload, the UAV can fly for 1-2.5 hours. But, without payload, the UAV can fly up to 6 hours!
 
-On the other hands, [ScanEagle 3](https://www.insitu.com/wp-content/uploads/2020/12/ScanEagle3_ProductCard_DU120320.pdf) equipped with electric hybrid engine for missions that equire increased available power and a low acoustic signature
+On the other hands, [ScanEagle 3](https://www.insitu.com/wp-content/uploads/2020/12/ScanEagle3_ProductCard_DU120320.pdf) also equipped with electric hybrid engine for missions that equire increased available power and a low acoustic signature
 
 The endurance can go up to 18 hours. Engine & fuel type: Heavy fuel (JP-5/JP-8)
 
-## Internship experience
+## Internship experiences
 
 <img src="https://user-images.githubusercontent.com/60868965/229862747-6af2d5a5-efc7-4e0a-8a2c-ee1d60618f76.png" width="100" />
 
@@ -389,8 +419,6 @@ https://user-images.githubusercontent.com/60868965/229838860-de1342af-529a-43ea-
 
 The mission was successful. The UAV was able to fly about 2 hours (iirc).
 
-The pilot takeover the control and lands the UAV safely.
+The pilot takeover the control and lands the UAV safely. [HD & Full video: https://youtu.be/RucIUQfPn2Q]
 
 https://user-images.githubusercontent.com/60868965/229861251-c4ab1f15-a943-4a67-a615-2885a0f1b339.mp4
-
-HD & Full video: https://youtu.be/RucIUQfPn2Q
