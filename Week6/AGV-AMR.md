@@ -167,7 +167,7 @@ On the other hands, **AMRs** shared similar body design with AGVs, but with some
     <td>Outdoor environments or rough terrain</td>
     <td>
     <p>DieQua’s Compact Drive and Steering Solutions</p>
-    <img src="https://diequa.com/wp-content/uploads/2022/06/screenshot-differential-drive-main.png"/>
+    <img src="https://user-images.githubusercontent.com/60868965/231372606-9234b09d-baad-4f75-ac80-1e44cb80c118.png"/>
     </td>
   </tr>
   <tr>
@@ -183,29 +183,176 @@ On the other hands, **AMRs** shared similar body design with AGVs, but with some
 
 ### Navigation
 
-#### AGV Navigation
-
 AGVs typically rely on pre-defined paths or routes that are physically marked on the ground or other infrastructure, such as magnetic tape, painted lines, QR code stickers or laser targets.
 
 The AGV follows these paths and uses **optical sensors** to detect deviations from the path and make corrections. Some AGVs may use onboard sensors to detect obstacles and avoid collisions. AGVs are best suited for **well-defined environments** with fixed infrastructure, such as manufacturing facilities, warehouses, and airports.
 
+#### AGV - Line Navigation
+
 Differences between painted line, Data Matrix line, and Data Matrix Grid:
 
-1. For painted line, the AGV **simply follow** this line.
+1. For painted/magnetic line, the AGV **simply follow** this line.
+
    ![AGV line](https://user-images.githubusercontent.com/60868965/231026410-b753c700-0001-4a36-987a-01fc687db749.gif)
 
+   The magnetic sensor is installed on the bottom of the AGV.
+
+   ![Magentic sensor AGV](https://www.agvnetwork.com/images/technology/Sensors/agv_with_magnetic_sensor_for_navigation.jpg)
+
 2. For Data Matrix line, the AGV will follow the line and detect the code to know its **current precise positions**.
+
    ![AGV Data matrix](https://user-images.githubusercontent.com/60868965/231026754-1eb01605-f5c1-415a-993e-d12381e0ae80.gif)
 
 3. For Data Matrix Grid, the AGV will go from one point to another point and detect the code to know its **current precise positions**. The sensor need to be accurate as possible to move the robot to the correct directions.
+
    ![AGV Grid matrix](https://user-images.githubusercontent.com/60868965/231027208-fbfd82fd-a547-49ac-b372-7b8da1820cbe.gif)
+
+#### AGV - Laser Navigation (LGV)
+
+This robot used 360° horizontal 2D LiDAR scanner to detect reflector marks within its environment. The onboard computer performs necessary calculations to determine the robot’s position and orientation. The robot then uses this information to navigate through the environment.
+
+![LGV Laser](https://www.agvnetwork.com/images/technology/Sensors/2d_lidar_for_navigation.jpg)
+
+To learn more about LGV, visit [here](https://www.agvnetwork.com/what-is-a-laser-guided-vehicle-lgv).
+
+#### AGV - Natural Navigation
+
+This robot uses **natural landmarks** such as walls, pillars, and other objects to detect its environment and localize itself. It uses **sensors** such as cameras, lidar, and ultrasonic sensors to detect obstacles and avoid collisions.
+
+![natural navigation](https://www.agvnetwork.com/images/technology/Sensors/2d_lidar_for_natural_navigation.jpg)
 
 #### AMR Navigation
 
 AMRs are designed to navigate through **dynamic environments** with changing infrastructure. It detects its enviroments and localization using natural landmarks. They are equipped with **sensors** such as cameras, lidar, and ultrasonic sensors to detect obstacles and avoid collisions.
 
+AMRs often use **[SLAM](https://www.mathworks.com/discovery/slam.html) (Simultaneous Localization and Mapping)** techniques in their navigation system. SLAM is a computational technique that allows a robot to construct a map of its environment while simultaneously determining its own position within that map.
+
+In SLAM, the robot collects sensor data from its surroundings and uses that data to build a map of the environment. At the same time, it uses that data to estimate its own position within the map. As the robot moves through the environment, it continuously updates the map and refines its position estimate.
+
 Example of the robot 'read' its environment and localize itself using camera and lidar.
 
 ![AMR Lidar](https://user-images.githubusercontent.com/60868965/231027894-e2a1bbc4-5c57-4a65-adaa-753963179b40.gif)
 
+Below are some **crucial sensors** that an AGV/AMR needs to have:
+
+<table>
+  <tr>
+    <th>Sensor</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>LiDAR</td>
+    <td>Emit laser beams and use the reflection of those beams to create a 3D map of the robot's environment. They are often used for mapping, localization, and obstacle detection.</td>
+    <td>
+    <a href="https://my.cytron.io/p-rplidar-s1-portable-tof-laser-scanner-kit-40m">RPLiDAR S1 Portable ToF Laser Scanner Kit-40M</a>
+    <img src="https://static.cytron.io/image/cache/catalog/products/SN-LIDAR-S1/SN-LIDAR-S1_a-512x512.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td>Cameras</td>
+    <td>They can be used to capture images of the environment that can be processed to create a map, and can also be used to track visual features to determine the robot's position.</td>
+    <td>
+    <a href="https://www.stereolabs.com/zed-2i/">ZED 2i</a>
+    <img src="https://user-images.githubusercontent.com/60868965/231380462-2327795f-d036-46e9-9b28-4813c281c38d.png">
+    </td>
+  </tr>
+  <tr>
+    <td>Inertial Measurement Units (IMUs)</td>
+    <td>Measure the robot's acceleration and rotation. They are often used in combination with other sensors, such as lidar and cameras, to improve localization accuracy.</td>
+    <td>
+    <a href="https://my.rs-online.com/web/p/motion-sensor-ics/2496721">STMicroelectronics ASM330LHHX IMU</a>
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQyNIQoYjJkz4wSrK-NgdqmWTTEByaxLz3DdVhl0flZf2mkuqxEtXHti3JuUF0N7WkwHxs4xbnb&usqp=CAc">    
+    </td>
+  </tr>
+  <tr>
+    <td>Ultrasonic Sensors</td>
+    <td>Use sound waves to detect obstacles in the robot's path. They are often used for close-range obstacle detection.</td>
+    <td>
+    <a href="https://my.rs-online.com/web/p/reflective-optical-sensors/6666577">GP2Y0A710K0F Sharp</a>
+    <img src="https://user-images.githubusercontent.com/60868965/231381600-5dab5010-9f31-4526-82cc-627b6756e81d.png">
+    </td>
+  </tr>
+  <tr>
+    <td>Proximity Sensors</td>
+    <td>Detect the presence of objects in the robot's immediate vicinity. They can be used for obstacle detection and to determine the distance between the robot and other objects.</td>
+    <td>Omron E2E2-X5C1 Proximity Sensor
+    <img src="https://assets.omron.com/m/4b4fc4a4021f0778/Landscape_M-IMG_Product_E2E_NEXT_group_380x214.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td>Wheel Encoders</td>
+    <td>Wheel encoders measure the rotation of the robot's wheels. They can be used to estimate the robot's position and calculate its speed and direction of travel.</td>
+    <td>
+    <a href="https://www.sparkfun.com/products/12629">Wheel Encoder Kit</a>
+    <img src="https://cdn.sparkfun.com//assets/parts/9/3/1/1/12629-01.jpg">
+    </td>
+  </tr>
+</table>
+
 ### Data Collection
+
+### Data Transmission
+
+The robots constantly sending/receiving data for control, data collection etc. They are are several ways the robot can communicate.
+
+#### Wired Communication
+
+Wired communication is the most common way of communication. It is the most reliable and secure way of communication. It is also the fastest way of communication. However, it is not the most flexible way of communication.
+
+#### Wireless Communication
+
+Wireless communication is the most flexible and convenient way of communication. This can include Wi-Fi, Bluetooth, ZigBee, or other wireless protocols.
+
+![agv communication example](https://user-images.githubusercontent.com/60868965/231385685-ca41357b-4a69-4395-818b-8cd36b83f735.png)
+
+#### RTLS
+
+[Real-Time Location Systems (RTLS)](https://www.atlasrfidstore.com/what-is-rtls-an-introduction-to-real-time-location-systems/) are a type of technology used to track the real-time location of objects or people within a specific environment. The technology is used to track the robot's position within the facility, warehouse or factory in real-time.
+
+All RTLS applications will consist of a few basic components: a transponder, a receiver, and software to interpret the data from each.
+
+<table>
+  <thead>
+    <tr>
+      <th>Transponders</th>
+      <th>Receivers</th>
+      <th>Software</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li>Radio-Frequency Identification (RFID) Tags</li>
+          <li>Bluetooth Beacons</li>
+          <li>Smart Devices</li>
+          <li>Wi-Fi Tags</li>
+          <li>Global Navigation Satellite System (GNSS)/Global Positioning System (GPS) Tags</li>
+          <li>Ultrasound Tags</li>
+          <li>Infrared Tags</li>
+          <li>Smart Devices (Depending on the Mode)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Readers</li>
+          <li>Location Sensors</li>
+          <li>Access Points</li>
+          <li>Receivers</li>
+          <li>Beacons (Depending on the Mode)</li>
+          <li>Smart Devices (Depending on the Mode)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Firmware - software that resides on the hardware</li>
+          <li>Software or application software - software that resides on the back-end computer or server</li>
+          <li>Middleware - used to connect firmware and application software</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Power Management
