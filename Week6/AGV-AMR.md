@@ -33,6 +33,8 @@ Some key differences of AGV & AMR:
 
 ![amr vs agv image](https://cssi.com/wp-content/uploads/AMR-vs-AGV-768x461.png)
 
+**[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
+
 ### History of AGV:
 
 - The first AGVs were introduced to industry in the 1950s, by Barrett Electronics of Northbrook, Illinois.
@@ -54,6 +56,8 @@ Some key differences of AGV & AMR:
 The **first automotic lawnmower, Mowbot**, introduced in 1969.
 
 ![mowbot](https://s.yimg.com/uu/api/res/1.2/6fUhqjyz.49ODQqZ_dmsRQ--~B/aD04MDA7dz02MDE7YXBwaWQ9eXRhY2h5b24-/https://www.blogcdn.com/slideshows/images/slides/312/161/3/S3121613/slug/l/mowbot1969-800-1.jpg)
+
+**[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
 
 ## Applications of AGV/AMR
 
@@ -105,6 +109,8 @@ Some of the applications of AGV/AMR are listed below:
   </tbody>
 <table>
 
+**[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
+
 ## Main components of the robot
 
 ### Body design
@@ -131,6 +137,8 @@ On the other hands, **AMRs** shared similar body design with AGVs, but with some
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Box-shaped         | This is a simple and common body type for AMRs. It is typically used for indoor applications where the robot needs to carry payloads, such as goods, parts or tools. The box shape provides ample space to store the payload and also allows for easy integration of various sensors and cameras. | ![box amr](https://www.techzine.eu/wp-content/uploads/2022/12/shutterstock_1964618788-1-768x512.jpg)                                                                               |
 | Cylindrical-shaped | This body type is used for AMRs that need to navigate through tight spaces or areas with many obstacles. The cylindrical shape allows the robot to easily move around and avoid obstacles without getting stuck. This type of AMR is commonly used in hospitals or restaurants.                   | ![cylindrical amr](https://setthetables.com/wp-content/uploads/2022/11/%E8%B4%9D%E6%8B%89-%E6%B3%B0%E5%9B%BD%E8%8F%9CJohnnys-%E9%A9%AC%E6%9D%A5%E8%A5%BF%E4%BA%9A-11-1-scaled.jpg) |
+
+**[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
 
 ### Locomotion
 
@@ -181,6 +189,8 @@ On the other hands, **AMRs** shared similar body design with AGVs, but with some
   </tr>
 </table>
 
+**[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
+
 ### Navigation
 
 AGVs typically rely on pre-defined paths or routes that are physically marked on the ground or other infrastructure, such as magnetic tape, painted lines, QR code stickers or laser targets.
@@ -220,6 +230,8 @@ To learn more about LGV, visit [here](https://www.agvnetwork.com/what-is-a-laser
 This robot uses **natural landmarks** such as walls, pillars, and other objects to detect its environment and localize itself. It uses **sensors** such as cameras, lidar, and ultrasonic sensors to detect obstacles and avoid collisions.
 
 ![natural navigation](https://www.agvnetwork.com/images/technology/Sensors/2d_lidar_for_natural_navigation.jpg)
+
+**[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
 
 #### AMR Navigation
 
@@ -290,7 +302,11 @@ Below are some **crucial sensors** that an AGV/AMR needs to have:
   </tr>
 </table>
 
+**[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
+
 ### Data Collection
+
+**[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
 
 ### Data Transmission
 
@@ -355,4 +371,87 @@ All RTLS applications will consist of a few basic components: a transponder, a r
   </tbody>
 </table>
 
+**[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
+
 ### Power Management
+
+#### Batteries
+
+AGVs are powered by rechargeable batteries. The choice of battery technology depends on factors such as power requirements, operating environment, and lifespan.
+
+Most common battery technology among AGV is Lithium-ion batteries. Lithium Iron Phosphate (LiFePO4) batteries are also gaining popularities in robotics. Below is the example comparison.
+
+<table>
+  <thead>
+    <tr>
+      <th>Lithium-ion</th>
+      <th>Lithium Iron Phosphate (LiFePO4)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li>High energy density</li>
+          <li>Fast charging times</li>
+          <li>Low self-discharge rate</li>
+          <li>High power density</li>
+          <li>High operating temperature range</li>
+          <li>Low cost</li>
+          <li>Example: <a href="https://www.motorsportgoetz.com/Battery-Lithium-YB16AL-A2-YB14L-A2-YB12AL-A2-YV10L-B-12N14-3AYTX14">Battery Lithium YB16AL-A2</a> </li>
+          <img src="https://www.motorsportgoetz.com/media/image/product/169322/lg/batterie-lithium-ionen-yt12b-bs-yt14b-bs-yb16al-a2-lit2b-quad-motorrad-roller-mit-led-anzeige_3.jpg">
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>High energy density</li>
+          <li>High power density</li>
+          <li>High operating temperature range</li>
+          <li>Low cost</li>
+          <li>Long cycle life</li>
+          <li>Low self-discharge rate</li>
+          <li>Low maintenance</li>
+           <li>Example: <a href="https://discoverbattery.com/products/search/14-24-2800">AES LiFePO4 Industrial Mobile Battery</a> </li>
+          <img src="https://img.discoverbattery.com/images/products/03_aes/870_artwork_images/aes-14-24-2800.png">
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+A **must have components** for battery-powered AGVs are Battery Management System and onboard charger controller.
+
+#### Charging Infrastructure
+
+AGVs must be able to recharge their batteries in a timely and efficient manner. Below are some examples of charging infrastructure used in industries.
+
+<table>
+  <thead>
+    <tr>
+      <th>Charging Infrastructure</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+       <strong>Charging Contact</strong>
+      </td>
+      <td>
+      <img src="https://www.agvnetwork.com/images/technology/wireless/AGV_with_opportunity_contact_charging_6.jpg"/>
+       <img src="https://user-images.githubusercontent.com/60868965/232446475-e77f3e4c-e579-487b-99b3-8b2afb4f9f6c.png"/>
+      </td>
+    </tr>
+     <tr>
+      <td>
+       <strong>Wireless Charging</strong> - Usually slower compared to contact charging
+      </td>
+      <td>
+      <img src="https://www.therobotreport.com/wp-content/uploads/2018/01/Delta-Products-in-the-form-of-a-new-93-percent-efficient-wireless-charging-system-for-AGV-Wireless-Power-Solutions.jpg"/>
+       <img src="https://roboticsandautomationnews.com/wp-content/uploads/2021/02/versabox-wireless-charging-agv_induktives-laden-fts.jpg"/>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+
+**[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
