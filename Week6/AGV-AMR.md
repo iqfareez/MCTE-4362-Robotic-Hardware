@@ -23,13 +23,12 @@
 Some key differences of AGV & AMR:
 | Features | AGV | AMR |
 | --- | --- | --- |
-| Control system and sensors | Simpler than AMR | More sophisticated than AGV |
-| Cost | In some cases, less expensive | Can be more expensive than AGV |
-| Navigation | Primarily follow fixed infrastructure | Freely navigate operational space |
-| Payload capacity | Can carry extreme payloads | Payload capacity may be limited |
-| Obstacle avoidance | Can become “stuck” if they come across an object | Actively navigate around obstacles |
-| Localization | Follow fixed infrastructure | AMR manufacturers have a variety of methods to keep their machines “localized” |
-| Best application | Work best in well defined conditions such as material handling | Work best in unstructured environments such as security, deliveries, and person to goods intralogistics |
+| :control_knobs: Control system and sensors | Simpler than AMR | More sophisticated than AGV |
+| :money_with_wings: Cost | In some cases, less expensive | Can be more expensive than AGV |
+| :compass: Navigation | Primarily follow fixed infrastructure | Freely navigate operational space |
+| :package: Payload capacity | Can carry extreme payloads | Payload capacity may be limited |
+| :round_pushpin: Localization | Follow fixed infrastructure | AMR manufacturers have a variety of methods to keep their machines “localized” |
+| :1st_place_medal: Best application | Work best in well defined conditions such as material handling | Work best in unstructured environments such as security, deliveries, and person to goods intralogistics |
 
 ![amr vs agv image](https://cssi.com/wp-content/uploads/AMR-vs-AGV-768x461.png)
 
@@ -119,9 +118,9 @@ Some of the applications of AGV/AMR are listed below:
 
 | Main types | Description                                                                                                                                                                                                                        | Example                                                                                                         |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Carts      | The simplest AGV material handling machines. They’re low-profile carts with a storage structure mounted on top containing various materials or items. It moves around the facility and stops where the materials are needed.       | ![Cart AGV](https://www.conger.com/wp-content/uploads/2022/05/toyota-agv-cart-2.jpg)                            |
-| Tugger     | Tugger AGVs are similar to carts, but they have a tow bar that can be used to pull other non-powered carts or containers.                                                                                                          | ![Tugger AGV](https://www.jbtc.com/automated-systems/wp-content/uploads/sites/6/2021/08/Industries-FoodBev.jpg) |
-| Forklift   | Forklift AGVs are similar to tugger AGVs, but they have a forklift attachment that can be used to lift and move pallets. They’re used to automatically move and stack products like paper rolls, coils, and even vehicles.         | ![Forklift AGV](https://imgur.com/qwaz1jK.png)                                                                  |
+| Carts      | Low-profile carts with a storage structure mounted on top containing various materials or items. It moves around the facility and stops where the materials are needed.                                                            | ![Cart AGV](https://www.conger.com/wp-content/uploads/2022/05/toyota-agv-cart-2.jpg)                            |
+| Tugger     | Similar to carts, but they have a tow bar that can be used to pull other non-powered carts or containers.                                                                                                                          | ![Tugger AGV](https://www.jbtc.com/automated-systems/wp-content/uploads/sites/6/2021/08/Industries-FoodBev.jpg) |
+| Forklift   | Similar to tugger AGVs, but they have a forklift attachment that can be used to lift and move pallets. They’re used to automatically move and stack products like paper rolls, coils, and even vehicles.                           | ![Forklift AGV](https://imgur.com/qwaz1jK.png)                                                                  |
 | Unit-load  | An automated to transport single products. It have large surface area to load items such as a pallet or a bin containing products.                                                                                                 | ![Unit-load AGV](https://www.conger.com/wp-content/uploads/2022/05/agv-unit-load.jpg)                           |
 | Heavy-haul | The most robust type, featuring sturdy bases, durable wheels, and large platforms, and built to handle up to 250,000 lbs. They are designed to transport heavy loads such as large machinery, vehicles, and other heavy equipment. | ![Heavy-haul AGV](https://www.conger.com/wp-content/uploads/2022/05/heavy-haul-agv.jpg)                         |
 
@@ -305,6 +304,13 @@ Below are some **crucial sensors** that an AGV/AMR needs to have:
 **[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
 
 ### Data Collection
+
+The data that the robot collects depends on its applications. Below are some examples:
+
+- **Environment data:** Camera, Lidar etc are used to do mapping, location of items etc. This data is used to improve the robot accuracy in navigation.
+- **Battery levels:** To keep track of the battery levels and to prevent the robot from running out of battery.
+- **Number of stocks available:** To keep track of the number of stocks available in the warehouse.
+- etc.
 
 **[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
 
