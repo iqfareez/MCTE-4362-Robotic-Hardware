@@ -1,5 +1,5 @@
 [![Download as PDF](https://img.shields.io/badge/Download%20as%20PDF-EF3939?style=flat-square&logo=adobeacrobatreader&logoColor=white&color=black&labelColor=ec1c24)](https://mdtopdf.up.railway.app/convertPdf?url=https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/blob/main/Week6/AGV-AMR.md)
-![Assignment completion](https://img.shields.io/badge/Status-WIP-yellow?style=flat-square)
+![Assignment completion](https://img.shields.io/badge/Status-Completed-green?style=flat-square)
 
 # Automated Guided Vehicle (AGV) & Autonomous Mobile Robot (AMR)
 
@@ -236,9 +236,9 @@ This robot uses **natural landmarks** such as walls, pillars, and other objects 
 
 AMRs are designed to navigate through **dynamic environments** with changing infrastructure. It detects its enviroments and localization using natural landmarks. They are equipped with **sensors** such as cameras, lidar, and ultrasonic sensors to detect obstacles and avoid collisions.
 
-AMRs often use **[SLAM](https://www.mathworks.com/discovery/slam.html) (Simultaneous Localization and Mapping)** techniques in their navigation system. SLAM is a computational technique that allows a robot to construct a map of its environment while simultaneously determining its own position within that map.
+AMRs often use **[SLAM](https://www.mathworks.com/discovery/slam.html) (Simultaneous Localization and Mapping)** techniques in their navigation system. The robot collects sensor data from its surroundings and uses that data to build a map of the environment. At the same time, it uses that data to estimate its own position within the map.
 
-In SLAM, the robot collects sensor data from its surroundings and uses that data to build a map of the environment. At the same time, it uses that data to estimate its own position within the map. As the robot moves through the environment, it continuously updates the map and refines its position estimate.
+As the robot moves through the environment, it continuously updates the map and refines its position estimate.
 
 Example of the robot 'read' its environment and localize itself using camera and lidar.
 
@@ -301,6 +301,18 @@ Below are some **crucial sensors** that an AGV/AMR needs to have:
   </tr>
 </table>
 
+#### AGV Traffic Control
+
+In brief, traffic control measures include zone control, collision avoidance or a mix of both:
+
+| Traffic Control         | Description                                                                                                                                                                                                                             |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Zone Control**        | The AGV is assigned a **specific zone to operate in**. The AGV will not leave the zone unless it is instructed to do so. A wireless transmitter transmits signals in defined areas to determine whether a given area is 'clear' or not. |
+| **Collision Avoidance** | The AGV will avoid collisions with other AGVs and obstacles. The AGV contains sensors that transmit a signal and wait for a reply to determine if an object is in front of it.                                                          |
+| **Combination Control** | The AGV will operate in a specific zone and avoid collisions with other AGVs and obstacles. This is the most robust system                                                                                                              |
+
+Read more about traffic control [here](https://6river.com/what-are-automated-guided-vehicles/#:~:text=in%20any%20direction.-,AGV%20traffic%20control,-Traffic%20control%20measures).
+
 **[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
 
 ### Data Collection
@@ -310,7 +322,9 @@ The data that the robot collects depends on its applications. Below are some exa
 - **Environment data:** Camera, Lidar etc are used to do mapping, location of items etc. This data is used to improve the robot accuracy in navigation.
 - **Battery levels:** To keep track of the battery levels and to prevent the robot from running out of battery.
 - **Number of stocks available:** To keep track of the number of stocks available in the warehouse.
-- etc.
+- Motor drives, laser scanners, localization, traffic, and obstacle interference, etc.
+
+By collecting this data, the trends and patterns can be identified and used to **improve the products** and develop the best possible configuration for any given AGV system. Furthermore, Machine Learning (ML) can come into play to **predicts downtime**, maintenance, and other issues.
 
 **[⬆ Back to top](#automated-guided-vehicle-agv--autonomous-mobile-robot-amr)**
 
