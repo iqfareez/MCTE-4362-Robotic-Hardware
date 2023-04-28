@@ -1,7 +1,7 @@
 # Swarming Robots
 
 [![Download as PDF](https://img.shields.io/badge/Download%20as%20PDF-EF3939?style=flat-square&logo=adobeacrobatreader&logoColor=white&color=black&labelColor=ec1c24)](https://mdtopdf.up.railway.app/convertPdf?url=https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/blob/main/Week7/Swarm.md)
-![Assignment completion](https://img.shields.io/badge/Status-completed-green?style=flat-square)
+![Assignment completion](https://img.shields.io/badge/Status-Completed-green?style=flat-square)
 
 # Swarming Robots
 
