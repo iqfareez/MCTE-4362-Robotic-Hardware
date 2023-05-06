@@ -108,6 +108,8 @@ It uses water jets that are directed through ducts to provide thrust to move the
 - Compact size
 - Low noise level
 
+**Edit 6/5/2023**. There's one new propulsion system in research, which looks kinda trippy but it is cool though. Check it out: https://www.linkedin.com/posts/daanmoreels_futurerobots-propulsionsystems-ugcPost-7056314959550410752--Cg5
+
 ### Navigation
 
 #### a) Thrusters
