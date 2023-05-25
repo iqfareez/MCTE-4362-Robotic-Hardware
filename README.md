@@ -11,3 +11,6 @@ Matric No.: 1914577
 |  4   | [Unmanned Aerial Vehicles (UAV)](Week4/UAV.md)                                      |
 |  6   | [Autonomous Guided Vehicle (AGV) & Autonomous Mobile Robot (AMR)](Week6/AGV-AMR.md) |
 |  7   | [Swarming Robots](Week7/Swarm.md)                                                   |
+|  11  | [Humanoid Robots](Week11/Humanoid.md)                                               |
+
+🤖🤖🤖
