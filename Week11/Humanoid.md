@@ -67,9 +67,43 @@ Example below shows a **3-DoF leg** composed of three links: thigh, shank and ho
 
 ### Navigation
 
+Imitating human ability to walk, jump and run is a challenging task for engineers to design it. The robot must be able to **sense its environment** and **adapt to it**. The robot must also be able to **plan its path** and **avoid obstacles**. Below are some aspects that are involved in navigation:
+
+#### Sensing
+
+The robot must be able to sense its environment. This can be done using **sensors** such as **cameras**, **radars**, **ultrasonic sensors**, **infrared sensors**, **laser sensors** and **GPS**.
+
+#### Planning
+
+The robot must be able to plan its path. This can be done using **algorithms** such as **A\***, **Dijkstra's algorithm**, and so on.
+
+#### Inverse Kinematics
+
+The robot must be able to calculate the **joint angles** required to move the robot to a specific position. The smooth and dynamic robot movement can uses inverse kinematics algorithm. Within robot motion pattern, positioning actuator angle of robot's legs will be determined by the amount of steps in X axis, Y axis, and Z axis robot.
+
+#### Balance Model
+
+Balance controller uses two types of sensors, **accelerometer** and **gyroscope**.
+
+Both sensors are placed parallel to the transverse plane of robot on robot trunk. Gyroscope will _measures angular velocity of the movement of robot body_, and accelerometer will _measures the linear acceleration of robot_. Both sensors are filtered using [Moving Averaging Filter](https://www.analog.com/media/en/technical-documentation/dsp-book/dsp_book_ch15.pdf) to refine the sensor readings.
+
 ### Data collection
 
-### Data Communication
+Humanoid robot are still in development stage. Therefore, data collection is important to improve the robot's performance.
+
+#### Data collection sensors example
+
+| Sensor type                     | Usage                                                                           |
+| ------------------------------- | ------------------------------------------------------------------------------- |
+| Camera                          | Collecting visual data                                                          |
+| Microphone                      | Collecting audio data                                                           |
+| Lidar                           | Capturing 3D depth information of the surroundings                              |
+| Inertial Measurement Unit (IMU) | Collecting data on acceleration, orientation, and angular velocity of the robot |
+| GPS                             | Providing global positioning data for outdoor navigation                        |
+| Force/Torque Sensor             | Measuring contact forces and torques during interactions                        |
+| Pressure Sensor                 | Detecting pressure changes or variations in the environment                     |
+| Proximity Sensor                | Sensing the presence or proximity of objects or obstacles                       |
+| Range Sensor                    | Measuring distances to objects or surfaces                                      |
 
 ### Power management
 
