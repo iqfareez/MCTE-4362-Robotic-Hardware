@@ -33,6 +33,7 @@ Humanoid robots are remarkable creations that **closely resemble the human form*
 | **1970 - WABOT-1**                   | The first digitally controlled anthropomorphic robot was built at Waseda University in Tokyo. It had a limb-control system with tactile sensors for walking and gripping, a vision system that could measure distances, and a conversation system that could communicate in Japanese.                                                                             |                                                ![image](https://bostonglobalforum.org/aiwsin/wp-content/uploads/sites/18/2021/01/c7d5b.179.large_.jpg)                                                 |
 | **2000 - Asimo**                     | Honda designed and developed Asimo as a multi-functional mobile assistant that could help people with poor mobility.                                                                                                                                                                                                                                              | ![asimo robot](https://www.cnet.com/a/img/resize/eda639c60821807e9759bb305152838b58ff5c3e/hub/2014/04/17/94b3b33e-eda0-459d-a5e2-7a75c7b3e80a/485318345.jpg?auto=webp&fit=crop&height=1200&width=1200) |
 | **2016 - Sophia**                    | A humanoid robot capable of expressing emotions and holding conversations. It was designed to look like Audrey Hepburn, and has been granted citizenship in Saudi Arabia and the United Arab Emirates.                                                                                                                                                            |                         ![sophia robot](https://upload.wikimedia.org/wikipedia/commons/1/1e/Sophia_at_the_AI_for_Good_Global_Summit_2018_%2827254369347%29_%28cropped%29.jpg)                          |
+| **2022 - Tesla Bot aka Optimus**     | Create a general purpose, bi-pedal, autonomous humanoid robot capable of performing unsafe, repetitive or boring tasks via AI.                                                                                                                                                                                                                                    |                                           ![tesla bot](https://media.wired.com/photos/611ffa5d042dfa2291227da2/1:1/w_1799,h_1799,c_limit/Gear-Tesla-Bot.jpg)                                           |
 
 [^1]: https://www.howwegettonext.com/a-history-of-humanoids
 
@@ -40,9 +41,30 @@ Humanoid robots are remarkable creations that **closely resemble the human form*
 
 ### Body design
 
-A robot resembling the **human body** in shape.
+A robot resembling the **human body** in shape. Below is example of ASIMO Robot:[^2]
 
-Some examples:
+![Asimo Robot height](https://asimo.honda.com/images/im_specschart.jpg)
+
+_ASIMO stands for **Advanced Step in Innovative Mobility**._
+
+Lightweight materials, like a **magnesium alloy** structure, combined with powerful computers and **34 servo motors** throughout its body help ASIMO move smoothly with ease.
+
+For it to have the flexibility to move like a human, Honda engineers created ASIMO with **34 Degrees** of Freedom. _One Degree of Freedom is the ability to move right and left or up and down._ Below is the breakdown of the degrees of freedom for human joints for the robot:
+
+| Parts     | Joints                                               | DOFs       |
+| --------- | ---------------------------------------------------- | ---------- |
+| HEAD      | Neck joint (Up/Down, Left/Right Rotation)            | 3 DOF      |
+| ARMS      | Shoulder joints (Forward/Backward, Up/Down Rotation) | 3 DOF      |
+|           | Elbow joints (Forward/Backward)                      | 1 DOF      |
+|           | Wrist joints (Up/Down, Left/Right, Rotation)         | 14 DOF     |
+| HANDS     | 4 fingers (to grasp objects) / Thumb                 | 26 DOF     |
+| HIP       | Rotation                                             | 2 DOF      |
+| LEGS      | Crotch joint (Forward/Backward, Left/Right Rotation) | 3 DOF      |
+|           | Knee joints (Forward/Backward)                       | 1 DOF      |
+|           | Ankle joints (Forward/Backward, Left/Right Rotation) | 12 DOF     |
+| **TOTAL** |                                                      | **57 DOF** |
+
+More examples of other robots body design:
 
 ![examples](https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs43154-021-00050-9/MediaObjects/43154_2021_50_Fig1_HTML.png)
 
@@ -67,18 +89,47 @@ Example below shows a **3-DoF leg** composed of three links: thigh, shank and ho
 
 #### Face, limbs and hands
 
-For some robots, they also equipped with limbs (arms etc) and moveable faces. Below are some examples of actuators used in robot Sophia: [^2]
+For some robots, they also equipped with limbs (arms etc) and moveable faces. Below are some examples of actuators used in robot Sophia: [^3]
 
 | Location     | Actuators                                                                                                                                                                                                                                                                         |
 | :----------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Arm          | Joint angle sensors, force sensors & touch sensors                                                                                                                                                                                                                                |
 | Head & face  | Five [Dynamixel XM430](https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/) servos and 23 [Xpert](https://www.xpert-rc-us.com/) servos.                                                                                                                                         |
 | Eyes         | Two [Hitec HS-65MG](https://hitecrcd.com/products/servos/analog/micromini/hs-65mg/product) servos                                                                                                                                                                                 |
-| Arms & hands | Two [Dynamixel MX64 servo](https://emanual.robotis.com/docs/en/dxl/mx/mx-64/)s, one [Dynamixel MX106](https://emanual.robotis.com/docs/en/dxl/mx/mx-106/) servo, four Dynamixel XM430 servos, six [Xpert](https://www.xpert-rc-us.com/) servos, and two MKS servos (per arm/hand) |
+| Arms & hands | Two [Dynamixel MX64](https://emanual.robotis.com/docs/en/dxl/mx/mx-64/) servos, one [Dynamixel MX106](https://emanual.robotis.com/docs/en/dxl/mx/mx-106/) servo, four Dynamixel XM430 servos, six [Xpert](https://www.xpert-rc-us.com/) servos, and two MKS servos (per arm/hand) |
+
+**Specifications of Dynamixel XM430 servo:**
+
+![servo image](https://emanual.robotis.com/assets/images/dxl/x/x_series_product.png)
+
+| Item                   | Specifications                                                                                                                                                                                                    |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MCU                    | ARM CORTEX-M3 (72 [MHz], 32Bit)                                                                                                                                                                                   |
+| Position Sensor        | Contactless absolute encoder (12Bit, 360 [°])                                                                                                                                                                     |
+| Motor                  | Coreless                                                                                                                                                                                                          |
+| Baud Rate              | 9,600 [bps] ~ 4.5 [Mbps]                                                                                                                                                                                          |
+| Control Algorithm      | PID control                                                                                                                                                                                                       |
+| Resolution             | 4096 [pulse/rev]                                                                                                                                                                                                  |
+| Operating Modes        | Current Control ModeVelocity Control Mode<br>Position Control Mode (0 ~ 360 [°])<br>Extended Position Control Mode (Multi-turn)<br>Current-based Position Control Mode<br>PWM Control Mode (Voltage Control Mode) |
+| Weight                 | 82 [g]                                                                                                                                                                                                            |
+| Dimensions (W x H x D) | 28.5 x 46.5 x 34 [mm]                                                                                                                                                                                             |
+| Gear Ratio             | 353.5 : 1                                                                                                                                                                                                         |
+| Operating Temperature  | -5 ~ +80 [°C]                                                                                                                                                                                                     |
+| Input Voltage          | 10.0 ~ 14.8 [V] (Recommended : 12.0 [V])                                                                                                                                                                          |
+| Command Signal         | Digital Packet                                                                                                                                                                                                    |
+| Physical Connection    | RS485 / TTL Multidrop Bus TTL<br>Half Duplex Asynchronous Serial Communication<br>RS485 Asynchronous Serial Communication with 8bit, 1stop, No Parity                                                             |
+| Feedback               | Position, Velocity, Current, Realtime tick, Trajectory, Temperature, Input Voltage, etc                                                                                                                           |
+| Case Material          | Metal (Front, Middle), Engineering Plastic (Back)                                                                                                                                                                 |
+| Gear Material          | Full Metal Gear                                                                                                                                                                                                   |
+| Standby Current        | 40 [mA]                                                                                                                                                                                                           |
 
 ### Navigation
 
-Imitating human ability to walk, jump and run is a challenging task for engineers to design it. The robot must be able to **sense its environment** and **adapt to it**. The robot must also be able to **plan its path** and **avoid obstacles**. Below are some aspects that are involved in navigation:
+Imitating human ability to walk, jump and run is a challenging task for engineers to design it. The robot must be able to **sense its environment** and **adapt to it**. The robot must also be able to **plan its path** and **avoid obstacles**.
+
+In Sophia robot, her base has **WiFi** and **two cell modems**, so it can be driven using a **handheld controller**, much like a remote control car.
+
+Below are some aspects that are involved in navigation:
 
 #### Sensing
 
@@ -128,4 +179,20 @@ For example, Asimo robot can communicate with IC Communication to such various t
 
 ### Power management
 
-[^2]: https://www.wevolver.com/specs/sophia-a-realistic-humanoid-robot
+Humanoid robot requires a lot of power to operate. Therefore, power management is important to ensure the robot can operate for a long time. This can be done using **batteries** and **power management system**.
+
+ASIMO robot is powered by a **51.8 V** lithium-ion battery. Here are some specs:
+
+- SIMO can operate for approximately 1 hour on a single battery.
+- About 3 hours are required to completely recharge ASIMO’s battery.
+- ASIMO’s battery weighs about 13 pounds (6 kg), and is located in its backpack.
+- The battery can be recharged onboard ASIMO through a power connection, or the battery can be removed and charged externally.
+- A new battery charging station was developed for ASIMO’s autonomous recharging. When the remaining battery level falls below a certain level, ASIMO will automatically identify and walk to the closest available battery charging station and re-charge while standing. See figure below. [^4]
+
+![New autonomous battery charging function](https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/assets/60868965/68dd3092-9ddd-472e-8d73-bfc7f60c2b37)
+
+<sup>Idk but he looks uncomfortable</sup>
+
+[^2]: https://asimo.honda.com/asimo-specs/
+[^3]: https://www.wevolver.com/specs/sophia-a-realistic-humanoid-robot
+[^4]: https://global.honda/newsroom/news/2007/c071211-eng.html
