@@ -48,13 +48,13 @@ Some examples:
 
 ### Locomotion
 
+#### Legged locomotion
+
 Most humanoid robot that are designed to move use **legged type locomoation**. Legged locomotion is more versatile and can be used in many different environments. However, legged locomotion is **more complex** than wheeled locomotion, for example.
 
 Example below shows a **3-DoF leg** composed of three links: thigh, shank and hoof, connected through the hip, knee and fetlock joints. The **damper** is also installed on the hip joint to absorb the impact force when the hoof hits the ground.
 
 ![image](https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/assets/60868965/6610b7da-5e09-4baf-ac5d-77badf474eec)
-
-#### Actuators that are commonly involved in legged locomotion
 
 | Actuator        | Usage                      |
 | --------------- | -------------------------- |
@@ -64,6 +64,17 @@ Example below shows a **3-DoF leg** composed of three links: thigh, shank and ho
 | Servo motor     | Adjusting leg position     |
 | Linear actuator | Enabling linear leg motion |
 | Force sensor    | Detecting leg force        |
+
+#### Face, limbs and hands
+
+For some robots, they also equipped with limbs (arms etc) and moveable faces. Below are some examples of actuators used in robot Sophia: [^2]
+
+| Location     | Actuators                                                                                                                                                                                                                                                                         |
+| :----------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Arm          | Joint angle sensors, force sensors & touch sensors                                                                                                                                                                                                                                |
+| Head & face  | Five [Dynamixel XM430](https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/) servos and 23 [Xpert](https://www.xpert-rc-us.com/) servos.                                                                                                                                         |
+| Eyes         | Two [Hitec HS-65MG](https://hitecrcd.com/products/servos/analog/micromini/hs-65mg/product) servos                                                                                                                                                                                 |
+| Arms & hands | Two [Dynamixel MX64 servo](https://emanual.robotis.com/docs/en/dxl/mx/mx-64/)s, one [Dynamixel MX106](https://emanual.robotis.com/docs/en/dxl/mx/mx-106/) servo, four Dynamixel XM430 servos, six [Xpert](https://www.xpert-rc-us.com/) servos, and two MKS servos (per arm/hand) |
 
 ### Navigation
 
@@ -93,17 +104,17 @@ Humanoid robot are still in development stage. Therefore, data collection is imp
 
 #### Data collection sensors example
 
-| Sensor type                     | Usage                                                                           |
-| ------------------------------- | ------------------------------------------------------------------------------- |
-| Camera                          | Collecting visual data                                                          |
-| Microphone                      | Collecting audio data                                                           |
-| Lidar                           | Capturing 3D depth information of the surroundings                              |
-| Inertial Measurement Unit (IMU) | Collecting data on acceleration, orientation, and angular velocity of the robot |
-| GPS                             | Providing global positioning data for outdoor navigation                        |
-| Force/Torque Sensor             | Measuring contact forces and torques during interactions                        |
-| Pressure Sensor                 | Detecting pressure changes or variations in the environment                     |
-| Proximity Sensor                | Sensing the presence or proximity of objects or obstacles                       |
-| Range Sensor                    | Measuring distances to objects or surfaces                                      |
+| Sensor type                     | Usage                                                                                                                                                                             |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Camera                          | Collecting visual data. _For example, in Sophia robot, she equipped with Intel RealSense camera. Custom wide-angle 1080p on her chest and two custom 720p HD camera on her eyes._ |
+| Microphone                      | Collecting audio data                                                                                                                                                             |
+| Lidar                           | Capturing 3D depth information of the surroundings                                                                                                                                |
+| Inertial Measurement Unit (IMU) | Collecting data on acceleration, orientation, and angular velocity of the robot                                                                                                   |
+| GPS                             | Providing global positioning data for outdoor navigation                                                                                                                          |
+| Force/Torque Sensor             | Measuring contact forces and torques during interactions                                                                                                                          |
+| Pressure Sensor                 | Detecting pressure changes or variations in the environment                                                                                                                       |
+| Proximity Sensor                | Sensing the presence or proximity of objects or obstacles                                                                                                                         |
+| Range Sensor                    | Measuring distances to objects or surfaces                                                                                                                                        |
 
 ### Data Communication
 
@@ -113,4 +124,8 @@ For example, Asimo robot can communicate with IC Communication to such various t
 
 ![IC Communication Card ASIMO Robot](https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/assets/60868965/5f43e1a9-05ac-4b4b-af4a-a40d5e05d726)
 
+[[_Source_]](https://asimo.honda.com/downloads/pdf/asimo-technical-information.pdf)
+
 ### Power management
+
+[^2]: https://www.wevolver.com/specs/sophia-a-realistic-humanoid-robot
