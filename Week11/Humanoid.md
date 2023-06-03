@@ -1,28 +1,27 @@
-# Humanoid Robots
-
 [![Download as PDF](https://img.shields.io/badge/Download%20as%20PDF-EF3939?style=flat-square&logo=adobeacrobatreader&logoColor=white&color=black&labelColor=ec1c24)](https://mdtopdf.up.railway.app/convertPdf?url=https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/blob/main/Week11/Humanoid.md)
-![Assignment completion](https://img.shields.io/badge/Status-In%20progress-yellow?style=flat-square)
+![Assignment completion](https://img.shields.io/badge/Status-Completed-green?style=flat-square)
 
-# Swarming Robots
+# Humanoid Robots
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [History](#history)
-- [Applications](#applications)
-- [Main components of the robot](#main-components-of-the-vehicle)
+- [Main components](#main-components)
   - [Body design](#body-design)
-  - [Locomotion](#Locomotion)
+  - [Locomotion](#locomotion)
   - [Navigation](#navigation)
-  - [Data collection](#data-collection)
-  - [Communication](#communication)
-  - [Power management](#power-management)
+  - [Data Collection](#data-collection)
+  - [Data Communication](#data-communication)
+  - [Power Management](#power-management)
 
 ## Introduction
 
 Humanoid robots are remarkable creations that **closely resemble the human form**, featuring an array of advanced technologies and capabilities. With their human-like appearance and ability to perform intricate tasks, humanoid robots have the potential to revolutionize various industries, from healthcare and entertainment to manufacturing and personal assistance. These robots possess articulated limbs, sophisticated sensors, and artificial intelligence algorithms, enabling them to navigate complex environments, interact with humans, and mimic human gestures and expressions.
 
 ![humanoid robots](https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/assets/60868965/f60ae85a-0565-4407-b578-84e538f9d252)
+
+**[⬆ Back to top](#humanoid-robots)**
 
 ## History [^1]
 
@@ -37,7 +36,9 @@ Humanoid robots are remarkable creations that **closely resemble the human form*
 
 [^1]: https://www.howwegettonext.com/a-history-of-humanoids
 
-## Main Components of the design
+**[⬆ Back to top](#humanoid-robots)**
+
+## Main Components
 
 ### Body design
 
@@ -67,6 +68,8 @@ For it to have the flexibility to move like a human, Honda engineers created ASI
 More examples of other robots body design:
 
 ![examples](https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs43154-021-00050-9/MediaObjects/43154_2021_50_Fig1_HTML.png)
+
+**[⬆ Back to top](#humanoid-robots)**
 
 ### Locomotion
 
@@ -123,6 +126,8 @@ For some robots, they also equipped with limbs (arms etc) and moveable faces. Be
 | Gear Material          | Full Metal Gear                                                                                                                                                                                                   |
 | Standby Current        | 40 [mA]                                                                                                                                                                                                           |
 
+**[⬆ Back to top](#humanoid-robots)**
+
 ### Navigation
 
 Imitating human ability to walk, jump and run is a challenging task for engineers to design it. The robot must be able to **sense its environment** and **adapt to it**. The robot must also be able to **plan its path** and **avoid obstacles**.
@@ -139,6 +144,10 @@ The robot must be able to sense its environment. This can be done using **sensor
 
 The robot must be able to plan its path. This can be done using **algorithms** such as **A\***, **Dijkstra's algorithm**, and so on.
 
+Example: Tesla Bot sensing environement with the power of AI
+
+![Environemnt discovery memorization](https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/assets/60868965/f34f440d-2c72-47fb-97fd-49bf255b880b)
+
 #### Inverse Kinematics
 
 The robot must be able to calculate the **joint angles** required to move the robot to a specific position. The smooth and dynamic robot movement can uses inverse kinematics algorithm. Within robot motion pattern, positioning actuator angle of robot's legs will be determined by the amount of steps in X axis, Y axis, and Z axis robot.
@@ -148,6 +157,8 @@ The robot must be able to calculate the **joint angles** required to move the ro
 Balance controller uses two types of sensors, **accelerometer** and **gyroscope**.
 
 Both sensors are placed parallel to the transverse plane of robot on robot trunk. Gyroscope will _measures angular velocity of the movement of robot body_, and accelerometer will _measures the linear acceleration of robot_. Both sensors are filtered using [Moving Averaging Filter](https://www.analog.com/media/en/technical-documentation/dsp-book/dsp_book_ch15.pdf) to refine the sensor readings.
+
+**[⬆ Back to top](#humanoid-robots)**
 
 ### Data collection
 
@@ -167,6 +178,12 @@ Humanoid robot are still in development stage. Therefore, data collection is imp
 | Proximity Sensor                | Sensing the presence or proximity of objects or obstacles                                                                                                                         |
 | Range Sensor                    | Measuring distances to objects or surfaces                                                                                                                                        |
 
+Example: Tesla Bot uses various sensors to control the motor torque based on the surface.
+
+![Tesla Torque Control](https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/assets/60868965/8578c5e2-478f-4fb7-b362-b6b78283ef28)
+
+**[⬆ Back to top](#humanoid-robots)**
+
 ### Data Communication
 
 Data communication is important for humanoid robot to communicate with other devices. This can be done using typical **wireless communication** such as **WiFi**, **Bluetooth**, **Zigbee**, **RFID**, **NFC**, **IR**, and so on.
@@ -176,6 +193,8 @@ For example, Asimo robot can communicate with IC Communication to such various t
 ![IC Communication Card ASIMO Robot](https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/assets/60868965/5f43e1a9-05ac-4b4b-af4a-a40d5e05d726)
 
 [[_Source_]](https://asimo.honda.com/downloads/pdf/asimo-technical-information.pdf)
+
+**[⬆ Back to top](#humanoid-robots)**
 
 ### Power management
 
@@ -192,6 +211,8 @@ ASIMO robot is powered by a **51.8 V** lithium-ion battery. Here are some specs:
 ![New autonomous battery charging function](https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/assets/60868965/68dd3092-9ddd-472e-8d73-bfc7f60c2b37)
 
 <sup>Idk but he looks uncomfortable</sup>
+
+**[⬆ Back to top](#humanoid-robots)**
 
 [^2]: https://asimo.honda.com/asimo-specs/
 [^3]: https://www.wevolver.com/specs/sophia-a-realistic-humanoid-robot
