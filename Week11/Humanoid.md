@@ -105,6 +105,12 @@ Humanoid robot are still in development stage. Therefore, data collection is imp
 | Proximity Sensor                | Sensing the presence or proximity of objects or obstacles                       |
 | Range Sensor                    | Measuring distances to objects or surfaces                                      |
 
-### Power management
+### Data Communication
 
-Power
+Data communication is important for humanoid robot to communicate with other devices. This can be done using typical **wireless communication** such as **WiFi**, **Bluetooth**, **Zigbee**, **RFID**, **NFC**, **IR**, and so on.
+
+For example, Asimo robot can communicate with IC Communication to such various things as shown below.
+
+![IC Communication Card ASIMO Robot](https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/assets/60868965/5f43e1a9-05ac-4b4b-af4a-a40d5e05d726)
+
+### Power management
