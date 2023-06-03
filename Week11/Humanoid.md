@@ -40,7 +40,30 @@ Humanoid robots are remarkable creations that **closely resemble the human form*
 
 ### Body design
 
+A robot resembling the **human body** in shape.
+
+Some examples:
+
+![examples](https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs43154-021-00050-9/MediaObjects/43154_2021_50_Fig1_HTML.png)
+
 ### Locomotion
+
+Most humanoid robot that are designed to move use **legged type locomoation**. Legged locomotion is more versatile and can be used in many different environments. However, legged locomotion is **more complex** than wheeled locomotion, for example.
+
+Example below shows a **3-DoF leg** composed of three links: thigh, shank and hoof, connected through the hip, knee and fetlock joints. The **damper** is also installed on the hip joint to absorb the impact force when the hoof hits the ground.
+
+![image](https://github.com/iqfareez/MCTE-4362-Robotic-Hardware/assets/60868965/6610b7da-5e09-4baf-ac5d-77badf474eec)
+
+#### Actuators that are commonly involved in legged locomotion
+
+| Actuator        | Usage                      |
+| --------------- | -------------------------- |
+| Electric motor  | Generating leg movement    |
+| Hydraulic       | Powering joint movements   |
+| Pneumatic       | Controlling leg extension  |
+| Servo motor     | Adjusting leg position     |
+| Linear actuator | Enabling linear leg motion |
+| Force sensor    | Detecting leg force        |
 
 ### Navigation
 
@@ -49,3 +72,5 @@ Humanoid robots are remarkable creations that **closely resemble the human form*
 ### Data Communication
 
 ### Power management
+
+Power
